@@ -26,7 +26,7 @@ def kurları_göster():
 
     if response.status_code == 200:
         data = response.json()
-        for doviz, oran in list(data["conversion_rates"].items())[:10]:
+        for doviz, oran in list(data["conversion_rates"].items()):
             print(f"{istenen_döviz} = {doviz}{oran}")
     else:
         print("API alınırken bir sorun oldu.")
